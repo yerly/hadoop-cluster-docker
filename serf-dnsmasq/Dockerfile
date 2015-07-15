@@ -3,6 +3,8 @@ FROM ubuntu:15.04
 
 MAINTAINER yerly <yerlyhoo@gmail.com>
 
+ADD sources.list /etc/apt/
+
 RUN apt-get update && \
 apt-get install -y unzip curl dnsmasq
 
