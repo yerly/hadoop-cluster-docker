@@ -1,4 +1,4 @@
-FROM kiwenlau/serf-dnsmasq:0.1.0
+FROM yerly/serf-dnsmasq:0.1.0
 
 MAINTAINER yerly <yerlyhoo@gmail.com>
 

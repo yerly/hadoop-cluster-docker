@@ -14,7 +14,7 @@ fi
 function docker_rmi()
 {
 	echo -e "\n\nsudo docker rmi yerly/$1:$tag"
-	sudo docker rmi kiwenlau/$1:$tag
+	sudo docker rmi yerly/$1:$tag
 }
 
 
@@ -23,7 +23,7 @@ function docker_build()
 {
 	cd $1
 	echo -e "\n\nsudo docker build -t yerly/$1:$tag ."
-	/usr/bin/time -f "real  %e" sudo docker build -t kiwenlau/$1:$tag .
+	/usr/bin/time -f "real  %e" sudo docker build -t yerly/$1:$tag .
 	cd ..
 }
 
