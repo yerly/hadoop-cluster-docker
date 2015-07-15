@@ -14,20 +14,20 @@ fi
 cd hadoop-master
 
 # change the slaves file
-echo "master.kiwenlau.com" > files/slaves
+echo "master.yerly.cn" > files/slaves
 i=1
 while [ $i -lt $N ]
 do
-	echo "slave$i.kiwenlau.com" >> files/slaves
+	echo "slave$i.yerly.cn" >> files/slaves
 	((i++))
-done 
+done
 
 # delete master container
-sudo docker rm -f master 
+sudo docker rm -f master
 
 # delete hadoop-master image
-sudo docker rmi kiwenlau/hadoop-master:$tag 
+sudo docker rmi yerly/hadoop-master:$tag
 
 # rebuild hadoop-master image
 pwd
-sudo docker build -t kiwenlau/hadoop-master:$tag .
+sudo docker build -t yerly/hadoop-master:$tag .
