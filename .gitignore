@@ -1,2 +1,5 @@
 
 hadoop-base/files/hadoop-2.7.0*
+hadoop-spark/files/spark-1.4.1-bin-hadoop2.6*
+hadoop-spark/files/scala-2.11.7*
+

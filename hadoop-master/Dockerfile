@@ -1,4 +1,4 @@
-FROM yerly/hadoop-base:0.1.0
+FROM yerly/hadoop-spark:0.1.0
 
 MAINTAINER yerly <yerlyhoo@gmail.com>
 

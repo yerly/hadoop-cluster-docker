@@ -48,7 +48,9 @@ then
 	docker_rmi hadoop-master
 	docker_rmi hadoop-slave
 	docker_rmi hadoop-base
+	docker_rmi hadoop-spark
 	docker_build hadoop-base
+	docker_build hadoop-spark
 	docker_build hadoop-master
 	docker_build hadoop-slave
 elif [ $image == "hadoop-master" ]
@@ -59,6 +61,12 @@ elif [ $image == "hadoop-slave" ]
 then
 	docker_rmi hadoop-slave
 	docker_build hadoop-slave
+elif [ $iamge =="hadoop-spark" ]
+then
+	docker_rmi hadoop-spark
+	docker_rmi hadoop-master
+	docker_build hadoop-spark
+	docker_build hadoop-master
 else
 	echo "The image name is wrong!"
 fi
